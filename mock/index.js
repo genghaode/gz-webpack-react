@@ -2,6 +2,10 @@ import Mock from 'mockjs'
 
 const Random = Mock.Random
 
+Mock.setup({
+  timeout: '2000-5000'
+})
+
 Mock.mock(/\/api\/test/, {
   'myData|10': [{
     'storeName': '@name',
