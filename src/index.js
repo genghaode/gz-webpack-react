@@ -20,9 +20,4 @@ if (__PROD__) {
   console.log('生产环境')
 }
 
-const Home = () => {
-  return (<h1 className="myH1">hello world</h1>)
-}
-
-render(<Home />, root)
-  // render(routes, root)
+render(routes, root)

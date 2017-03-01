@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-export const Home = (props) => {
+export const User = (props) => {
   return (
     <div>
-			Home
+			User
 			{props.children}
 		</div>
   )
