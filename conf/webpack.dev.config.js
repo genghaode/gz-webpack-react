@@ -10,6 +10,7 @@ config.entry.index = [
   'eventsource-polyfill',
   'webpack-hot-middleware/client?reload=true',
   'webpack/hot/only-dev-server',
+  path.join(commonPath.rootPath, 'mock/index.js'),
   path.join(commonPath.srcPath, 'index.js')
 ]
 
