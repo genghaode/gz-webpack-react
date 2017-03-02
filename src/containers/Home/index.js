@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 import { Button } from 'antd'
-
-import { fetchTest } from '../../api'
+import { addAction, minusAction } from '../../containers'
 
 const _Home = (props) => {
   const { num1, onClick1, num2, onClick2 } = props
@@ -20,19 +18,6 @@ const _Home = (props) => {
   )
 }
 
-const addAction = { type: 'add' }
-  // const minusAction = { type: 'minus' }
-
-const minusAction = () => {
-  return (dispatch, getState) => {
-    fetchTest().then((res) => {
-      console.log(res)
-      return dispatch({ type: "minus" })
-    }).catch((err) => {
-      console.log(err)
-    })
-  }
-}
 export const Home = connect(
   (state) => {
     return {

@@ -4,7 +4,7 @@ export const User = (props) => {
   return (
     <div>
 			User
-			{props.children}
+			{ props.children }
 		</div>
   )
 }

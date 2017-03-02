@@ -1,9 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { App } from './routes'
+import { Root } from './routes'
+
 import 'antd/dist/antd.css'
 import './index.css'
-
 
 const root = document.getElementById('app')
 
@@ -14,6 +14,4 @@ if (__PROD__) {
   console.log('生产环境')
 }
 
-
-
-render(<App />, root)
+render(<Root />, root)
