@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import axios from 'axios'
 
 import { Button } from 'antd'
+
+import { fetchTest } from '../../api'
 
 const _Home = (props) => {
   const { num1, onClick1, num2, onClick2 } = props
@@ -24,7 +25,7 @@ const addAction = { type: 'add' }
 
 const minusAction = () => {
   return (dispatch, getState) => {
-    axios.get('localhost:9090/api/test').then((res) => {
+    fetchTest().then((res) => {
       console.log(res)
       return dispatch({ type: "minus" })
     }).catch((err) => {
