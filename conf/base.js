@@ -16,8 +16,7 @@ module.exports = {
       'react-router-redux',
       'redux',
       'redux-logger',
-      'redux-thunk',
-      'axios'
+      'redux-thunk'
     ]
   },
   output: {

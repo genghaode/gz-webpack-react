@@ -10,6 +10,7 @@
 - mock请求数据模拟
 - 支持react-router
 - 支持redux
+- 引入ant.design
 
 ## 使用
 - 下载

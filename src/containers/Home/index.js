@@ -2,18 +2,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 
+import { Button } from 'antd'
+
 const _Home = (props) => {
   const { num1, onClick1, num2, onClick2 } = props
 
   return (
     <div>
-			Home
-			<button onClick={onClick1}>按钮1</button>
-			{num1}
-			<button onClick={onClick2}>按钮2</button>
-			{num2}
-			{props.children}
-		</div>
+      Home
+      <Button onClick={onClick1}>按钮1</Button>
+      {num1}
+      <Button onClick={onClick2}>按钮2</Button>
+      {num2}
+      {props.children}
+    </div>
   )
 }
 
