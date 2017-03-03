@@ -4,6 +4,7 @@ import { Root } from './routes'
 
 import 'antd/dist/antd.css'
 import './index.css'
+import './assets/fonts/iconfont.css'
 
 const root = document.getElementById('app')
 

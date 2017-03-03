@@ -1,4 +1,4 @@
-import { fetchTest } from '../../api'
+import { fetchTest } from '../../utils'
 
 export const addAction = { type: 'add' }
 
