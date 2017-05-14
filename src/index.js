@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Root } from './routes'
+import { App } from './layouts'
 
 import 'antd/dist/antd.css'
 import './index.css'
@@ -15,4 +15,4 @@ if (__PROD__) {
   console.log('生产环境')
 }
 
-render(<Root />, root)
+render(<App />, root)
