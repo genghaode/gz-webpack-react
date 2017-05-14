@@ -15,7 +15,7 @@ export const Header = connect(
   (state) => {
     console.log(state)
     return {
-      pathname: state.routing.locationBeforeTransitions.pathname
+      pathname: state.routing.location.pathname
     }
   }, (dispatch) => {
     return {
