@@ -1,2 +1,4 @@
-export { fetchTest }
-from './fetchMethod'
+module.exports = {
+  get fetchTest() { return require("./fetchMethod").fetchTest}
+}
+

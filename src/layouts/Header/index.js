@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Layout } from 'antd'
 import { connect } from 'react-redux'
 
 const pageConfig = {
@@ -15,9 +16,9 @@ const pageConfig = {
 
 const _Header = (props) => {
   return (
-    <div>
+    <Layout.Header>
     	<h1>{pageConfig[props.pathname].title}</h1>
-    </div>
+    </Layout.Header>
   )
 }
 

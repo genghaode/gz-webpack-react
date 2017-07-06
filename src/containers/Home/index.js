@@ -9,7 +9,7 @@ const _Home = (props) => {
   return (
     <div>
       Home
-      <Button onClick={onClick1}>按钮1</Button>
+      <Button type="primary" onClick={onClick1}>按钮1</Button>
       {num1}
       <Button onClick={onClick2}>按钮2</Button>
       {num2}

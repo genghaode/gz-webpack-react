@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store'
 import { ConnectedRouter } from 'react-router-redux'
 import createHistory from 'history/createBrowserHistory'
+import { Layout } from 'antd'
 
-import { Header } from '../Header'
+import { Sider, Header, Footer } from '../../'
+
+
+import { Route } from 'react-router-dom'
 import { Home, Category, User } from '../../containers'
-import { Tab } from '../Tab'
 
 const routes = [{ 
 	path: '/',
@@ -21,24 +23,32 @@ const routes = [{
    main: () => <User />
 }]
 
+
 export const App = (props) => {
   return (
     <Provider store={store}>
     	<ConnectedRouter history={createHistory()}>
-	    	<div>
-				  <Header />
-				  {
-		    		routes.map((route, index) => (
-		          <Route
-		            key={index}
-		            path={route.path}
-		            exact={route.exact}
-		            component={route.main}
-		          />
-		        ))
-		      }
-				  <Tab />
-	    	</div>
+				<Layout style={{minHeight: '100vh'}}>
+					<GSider />
+				  <Layout>
+				    <GHeader />
+				    <Layout.Content style={{ margin: '16px' }}>
+				      <div style={{ padding: 24, background: '#fff',  }}>
+						  {
+				    		routes.map((route, index) => (
+				          <Route
+				            key={index}
+				            path={route.path}
+				            exact={route.exact}
+				            component={route.main}
+				          />
+				        ))
+				      }
+				      </div>
+				    </Layout.Content>
+				    <GFooter />
+				  </Layout>
+				</Layout>
     	 </ConnectedRouter>
 	  </Provider>
 	)

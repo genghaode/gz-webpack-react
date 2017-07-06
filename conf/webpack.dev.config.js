@@ -25,7 +25,7 @@ config.module.rules.push({
 
 config.plugins.push(
   new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoErrorsPlugin(),
+  new webpack.NoEmitOnErrorsPlugin(),
   new BrowserSyncPlugin({
     host: '127.0.0.1',
     port: 9090,

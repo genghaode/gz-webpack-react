@@ -21,13 +21,17 @@ config.module.rules.push({
 config.plugins[0].options.minify = { removeComments: true, collapseWhitespace: true }
 
 config.plugins.push(
-  new webpack.optimize.UglifyJsPlugin(),
+  new webpack.LoaderOptionsPlugin({
+    minimize: true,
+    debug: false
+  }),
+  new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true,
+    comments: false,
+    ie8: true
+  }),
   new webpack.optimize.CommonsChunkPlugin({
     names: ['vendor']
-  }),
-  new ExtractTextWebpackPlugin({
-    filename: '[name].[contenthash:6].css',
-    allChunks: true
   })
 )
 
