@@ -7,7 +7,6 @@
 - 分离CSS文件
 - 代码压缩
 - 文件加MD5戳
-- mock请求数据模拟
 - 支持react-router
 - 支持redux
 - 引入ant.design

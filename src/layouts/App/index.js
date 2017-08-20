@@ -5,22 +5,24 @@ import { ConnectedRouter } from 'react-router-redux'
 import createHistory from 'history/createBrowserHistory'
 import { Layout } from 'antd'
 
-import { Sider, Header, Footer } from '../../'
-
+// import { Sider, Header, Footer } from '../../'
+import { Sider } from '../Sider'
+import { Footer } from '../Footer'
+import { Header } from '../Header'
 
 import { Route } from 'react-router-dom'
 import { Home, Category, User } from '../../containers'
 
-const routes = [{ 
-	path: '/',
+const routes = [{
+  path: '/',
   exact: true,
   main: () => <Home />
-},{ 
-	path: '/category',
+}, {
+  path: '/category',
   main: () => <Category />
-},{ 
-	path: '/user',
-   main: () => <User />
+}, {
+  path: '/user',
+  main: () => <User />
 }]
 
 
@@ -29,9 +31,9 @@ export const App = (props) => {
     <Provider store={store}>
     	<ConnectedRouter history={createHistory()}>
 				<Layout style={{minHeight: '100vh'}}>
-					<GSider />
+					<Sider />
 				  <Layout>
-				    <GHeader />
+				    <Header />
 				    <Layout.Content style={{ margin: '16px' }}>
 				      <div style={{ padding: 24, background: '#fff',  }}>
 						  {
@@ -46,10 +48,10 @@ export const App = (props) => {
 				      }
 				      </div>
 				    </Layout.Content>
-				    <GFooter />
+				    <Footer />
 				  </Layout>
 				</Layout>
     	 </ConnectedRouter>
 	  </Provider>
-	)
+  )
 }

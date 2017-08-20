@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/genghaode/gz-webpack-react#readme",
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-import": "^1.1.1",
@@ -45,11 +44,7 @@
     "html-webpack-plugin": "^2.28.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
-    "mockjs": "^1.0.0",
-    "postcss": "^6.0.4",
-    "postcss-loader": "^2.0.6",
     "react-hot-loader": "^3.0.0-beta.7",
-    "rucksack-css": "^0.9.1",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.5.1",
@@ -71,6 +66,5 @@
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0"
-  },
-  "theme": "./theme.js"
+  }
 }

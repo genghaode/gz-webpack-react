@@ -10,7 +10,6 @@ config.entry.index = [
   'eventsource-polyfill',
   'webpack-hot-middleware/client?reload=true',
   'webpack/hot/only-dev-server',
-  path.join(commonPath.rootPath, 'mock/index.js'),
   path.join(commonPath.srcPath, 'index.js')
 ]
 
@@ -45,7 +44,7 @@ config.devServer = {
   historyApiFallback: true,
   inline: true,
   hot: true,
-  port: 9000
+  port: 9000,
 }
 
 module.exports = config

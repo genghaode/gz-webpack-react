@@ -8,7 +8,7 @@ const _Home = (props) => {
 
   return (
     <div>
-      Home
+      Home hello cc
       <Button type="primary" onClick={onClick1}>按钮1</Button>
       {num1}
       <Button onClick={onClick2}>按钮2</Button>

@@ -21,15 +21,15 @@ if (__PROD__) {
 }
 
 const MyRender = Component =>
-    render(
-        <AppContainer>
+  render(
+    <AppContainer>
           <Component />
         </AppContainer>,
-        root
-    );
+    root
+  );
 
 MyRender(App)
 
-if(module.hot) {
-    module.hot.accept('./layouts', () => { MyRender(App) });
+if (module.hot) {
+  module.hot.accept('./layouts', () => { MyRender(App) });
 }
