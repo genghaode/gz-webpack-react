@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd'
 import { connect } from 'react-redux'
+import './index.css'
 
 const pageConfig = {
   '/': {
@@ -16,8 +17,12 @@ const pageConfig = {
 
 const _Header = (props) => {
   return (
-    <Layout.Header>
-    	<h1>{pageConfig[props.pathname].title}</h1>
+    <Layout.Header className="header">
+      <div className="gTr">
+        <h1 className="gTdM100 headerT">{pageConfig[props.pathname].title}</h1>
+        <a className="gTd" href="javascript:void(0)">退出</a>        
+      </div>
+
     </Layout.Header>
   )
 }

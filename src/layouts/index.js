@@ -1,4 +1,14 @@
-export { App } from './App'
-export { Sider } from './Sider'
-export { Footer } from './Footer'
-export { Header } from './Header'
+module.exports = {
+	get App() {
+		return require('./App').App
+	},
+	get Sider() {
+		return require('./Sider').Sider
+	},
+	get Footer() {
+		return require('./Footer').Footer
+	},
+	get Header() {
+		return require('./Header').Header
+	}
+}

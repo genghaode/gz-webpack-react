@@ -14,15 +14,19 @@
 }
 
 .gTd,
-.gTd100 {
+.gTdM,
+.gTd100,
+.gTdM100 {
   display: table-cell;
 }
-
-.gTd100 {
+.gTd,
+.gTdM {
+  white-space: nowrap;
+}
+.gTd100, .gTdM100 {
   width: 100%;
 }
-
-.gVertical {
+.gTdM, .gTdM100 {
   vertical-align: middle;
 }
 

@@ -7,7 +7,7 @@ const _Home = (props) => {
   const { num1, onClick1, num2, onClick2 } = props
 
   return (
-    <div>
+    <div style={{height: '2000px'}}>
       Home hello cc
       <Button type="primary" onClick={onClick1}>按钮1</Button>
       {num1}

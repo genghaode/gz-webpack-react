@@ -15,6 +15,8 @@ class _Sider extends Component {
 		return (
 			<Layout.Sider
 				id="gSider"
+				breakpoint="sm"
+    		collapsedWidth="64"
 			  collapsible
 			  collapsed={this.state.collapsed}
 			  onCollapse={(collapsed)=>this._onCollapse(collapsed)}
@@ -46,7 +48,7 @@ class _Sider extends Component {
 		)		
 	}
 	_onCollapse(collapsed){
-		console.log(collapsed)
+		this.props.myChange(collapsed)
     this.setState({
       collapsed,
       mode: collapsed ? 'vertical' : 'inline',

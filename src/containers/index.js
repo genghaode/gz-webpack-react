@@ -1,5 +1,23 @@
-export { Home } from './Home'
-export { test1, test2 } from './Home/reducer'
-export { addAction, minusAction } from './Home/action'
-export { Category } from './Category'
-export { User } from './User'
+module.exports = {
+	get Home(){
+		return require('./Home').Home
+	},
+	get test1(){
+		return require('./Home/reducer').test1
+	},
+	get test2(){
+		return require('./Home/reducer').test2
+	},
+	get addAction(){
+		return require('./Home/action').addAction
+	},
+	get minusAction(){
+		return require('./Home/action').minusAction
+	},
+	get Category(){
+		return require('./Category').Category
+	},
+	get User(){
+		return require('./User').User
+	}
+}

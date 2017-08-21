@@ -1,3 +1,9 @@
+#gSider {
+	overflow: auto;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+}
 #gSider .logo {
   height: 32px;
   background: #333;

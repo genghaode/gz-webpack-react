@@ -25,33 +25,49 @@ const routes = [{
   main: () => <User />
 }]
 
-
-export const App = (props) => {
-  return (
-    <Provider store={store}>
-    	<ConnectedRouter history={createHistory()}>
-				<Layout style={{minHeight: '100vh'}}>
-					<Sider />
-				  <Layout>
-				    <Header />
-				    <Layout.Content style={{ margin: '16px' }}>
-				      <div style={{ padding: 24, background: '#fff',  }}>
-						  {
-				    		routes.map((route, index) => (
-				          <Route
-				            key={index}
-				            path={route.path}
-				            exact={route.exact}
-				            component={route.main}
-				          />
-				        ))
-				      }
-				      </div>
-				    </Layout.Content>
-				    <Footer />
-				  </Layout>
-				</Layout>
-    	 </ConnectedRouter>
-	  </Provider>
-  )
+class _App extends Component{
+	state = {
+		siderMargin: '200px'
+	}
+	render(){
+	  return (
+	    <Provider store={store}>
+	    	<ConnectedRouter history={createHistory()}>
+					<Layout style={{minHeight: '100vh'}}>
+						<Sider myChange={this.myChange}/>
+					  <Layout style={{marginLeft: this.state.siderMargin}}>
+					    <Header />
+					    <Layout.Content style={{ margin: '16px' }}>
+					      <div style={{ padding: 24, background: '#fff',  }}>
+							  {
+					    		routes.map((route, index) => (
+					          <Route
+					            key={index}
+					            path={route.path}
+					            exact={route.exact}
+					            component={route.main}
+					          />
+					        ))
+					      }
+					      </div>
+					    </Layout.Content>
+					    <Footer />
+					  </Layout>
+					</Layout>
+	    	 </ConnectedRouter>
+		  </Provider>
+	  )
+	}
+	myChange = (collapsed)=>{
+		if(collapsed){
+			this.setState({
+				siderMargin: '64px'
+			})
+		}else {
+			this.setState({
+				siderMargin: '200px'
+			})
+		}
+	}
 }
+export const App = _App
