@@ -1,9 +1,7 @@
 var webpack = require('webpack'),
   path = require('path'),
   commonPath = require('./commonPath'),
-  CopyWebpackPlugin = require('copy-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
-  ExtractTextWebpackPlugin = require('extract-text-webpack-plugin'),
   env = process.env.NODE_ENV.trim(),
   fs = require('fs')
 
@@ -63,14 +61,6 @@ module.exports = {
       "process.env": {
         NODE_ENV: JSON.stringify("production")
       }
-    }),
-    new CopyWebpackPlugin([
-      { from: 'src/assets', to: 'assets' },
-      { context: commonPath.rootPath, from: 'static/*', ignore: ['*.md'] }
-    ]),
-    new ExtractTextWebpackPlugin({
-      filename: '[name].[contenthash:6].css',
-      allChunks: true
-    }),
+    })
   ]
 }
