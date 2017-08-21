@@ -7,6 +7,8 @@ var webpack = require('webpack'),
 
 config.output.filename = 'js/[name].[chunkhash:6].js'
 config.output.chunkFilename = 'js/[id].[chunkhash:6].js'
+// 可以换成cdn地址
+// config.output.publicPath = './'
 
 config.devtool = 'cheap-source-map'
 
@@ -41,7 +43,8 @@ config.plugins.push(
   new CopyWebpackPlugin([
     { from: 'src/assets', to: 'assets' },
     { context: commonPath.rootPath, from: 'static/*', ignore: ['*.md'] }
-  ])
+  ]),
+  new webpack.optimize.ModuleConcatenationPlugin()
 )
 
 module.exports = config

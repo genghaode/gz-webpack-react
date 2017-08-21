@@ -8,14 +8,14 @@ config.devtool = 'cheap-eval-source-map'
 
 config.entry.index = [
   'eventsource-polyfill',
-  'webpack-hot-middleware/client?reload=true',
+  'react-hot-loader/patch',
+  'webpack-dev-server/client?http://localhost:9000',
   'webpack/hot/only-dev-server',
   path.join(commonPath.srcPath, 'index.js')
 ]
 
 config.output.filename = '[name].js'
 config.output.chunkFilename = '[id].js'
-config.output.publicPath = '/'
 
 config.module.rules.push({
   test: /\.css$/,
@@ -37,7 +37,7 @@ config.plugins.push(
 )
 
 config.devServer = {
-  contentBase: commonPath.public,
+  contentBase: commonPath.pubulic,
   stats: {
     colors: true
   },
